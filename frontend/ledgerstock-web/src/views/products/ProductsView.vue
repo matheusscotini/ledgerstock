@@ -56,6 +56,7 @@
               <tr>
                 <th>Produto</th>
                 <th>SKU</th>
+                <th>Descrição</th>
                 <th>Categoria</th>
                 <th>Preço</th>
                 <th>Estoque</th>
@@ -69,6 +70,9 @@
               <tr v-for="product in paginatedProducts" :key="product.id">
                 <td>{{ product.name }}</td>
                 <td>{{ product.sku }}</td>
+                <td class="products-description" :title="product.description || ''">
+                  {{ product.description || '-' }}
+                </td>
                 <td>{{ product.category || '-' }}</td>
                 <td>{{ formatCurrency(product.price) }}</td>
                 <td>{{ product.currentStock }}</td>
@@ -439,6 +443,13 @@ onMounted(() => {
 
 .pagination__button {
   min-width: 110px;
+}
+
+.products-description {
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 960px) {

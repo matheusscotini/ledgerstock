@@ -153,3 +153,4 @@ C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Api\obj\Debug\net8.
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Api\obj\Debug\net8.0\LedgerStock.Api.pdb
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Api\obj\Debug\net8.0\LedgerStock.Api.genruntimeconfig.cache
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Api\obj\Debug\net8.0\ref\LedgerStock.Api.dll
+C:\Users\Matheus\Desktop\ledgerstock\backend\src\LedgerStock.Api\obj\Debug\net8.0\LedgerStock.Api.sourcelink.json

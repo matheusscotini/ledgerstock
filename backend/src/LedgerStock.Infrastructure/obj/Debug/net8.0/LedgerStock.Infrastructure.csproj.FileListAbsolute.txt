@@ -17,3 +17,4 @@ C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Infrastructure\obj\
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Infrastructure\obj\Debug\net8.0\LedgerStock.Infrastructure.pdb
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Infrastructure\obj\Debug\net8.0\LedgerStock.Infrastructure.genruntimeconfig.cache
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Infrastructure\obj\Debug\net8.0\ref\LedgerStock.Infrastructure.dll
+C:\Users\Matheus\Desktop\ledgerstock\backend\src\LedgerStock.Infrastructure\obj\Debug\net8.0\LedgerStock.Infrastructure.sourcelink.json

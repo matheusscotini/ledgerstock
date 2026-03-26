@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LedgerStock.Tests
-build_property.ProjectDir = C:\Users\Matheus\Desktop\LedgerStock\backend\tests\LedgerStock.Tests\
+build_property.ProjectDir = C:\Users\Matheus\Desktop\ledgerstock\backend\tests\LedgerStock.Tests\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

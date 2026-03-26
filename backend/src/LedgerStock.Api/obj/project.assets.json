@@ -4359,11 +4359,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj",
       "projectName": "LedgerStock.Api",
-      "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj",
+      "projectPath": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj",
       "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\obj\\",
+      "outputPath": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4378,11 +4378,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj": {
-              "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj"
+            "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj": {
+              "projectPath": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj"
             },
-            "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj"
+            "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj"
             }
           }
         }

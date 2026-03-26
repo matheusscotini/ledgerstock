@@ -4126,11 +4126,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\tests\\LedgerStock.Tests\\LedgerStock.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\tests\\LedgerStock.Tests\\LedgerStock.Tests.csproj",
       "projectName": "LedgerStock.Tests",
-      "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\tests\\LedgerStock.Tests\\LedgerStock.Tests.csproj",
+      "projectPath": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\tests\\LedgerStock.Tests\\LedgerStock.Tests.csproj",
       "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\tests\\LedgerStock.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\tests\\LedgerStock.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4145,8 +4145,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj": {
-              "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj"
+            "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj": {
+              "projectPath": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj"
             }
           }
         }

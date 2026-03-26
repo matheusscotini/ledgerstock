@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u2xQmAfMUr0=",
+  "dgSpecHash": "+5ScFx9sbBQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Matheus\\Desktop\\ledgerstock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

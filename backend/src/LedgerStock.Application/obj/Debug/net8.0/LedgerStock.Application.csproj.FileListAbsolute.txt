@@ -13,3 +13,4 @@ C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Application\obj\Deb
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Application\obj\Debug\net8.0\refint\LedgerStock.Application.dll
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Application\obj\Debug\net8.0\LedgerStock.Application.pdb
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Application\obj\Debug\net8.0\ref\LedgerStock.Application.dll
+C:\Users\Matheus\Desktop\ledgerstock\backend\src\LedgerStock.Application\obj\Debug\net8.0\LedgerStock.Application.sourcelink.json

@@ -9,3 +9,4 @@ C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\ne
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\refint\LedgerStock.Domain.dll
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\LedgerStock.Domain.pdb
 C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\ref\LedgerStock.Domain.dll
+C:\Users\Matheus\Desktop\ledgerstock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\LedgerStock.Domain.sourcelink.json
