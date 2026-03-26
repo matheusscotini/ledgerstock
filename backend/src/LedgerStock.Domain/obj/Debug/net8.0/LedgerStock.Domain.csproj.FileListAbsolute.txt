@@ -1,0 +1,11 @@
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\bin\Debug\net8.0\LedgerStock.Domain.deps.json
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\bin\Debug\net8.0\LedgerStock.Domain.dll
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\bin\Debug\net8.0\LedgerStock.Domain.pdb
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\LedgerStock.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\LedgerStock.Domain.AssemblyInfoInputs.cache
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\LedgerStock.Domain.AssemblyInfo.cs
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\LedgerStock.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\LedgerStock.Domain.dll
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\refint\LedgerStock.Domain.dll
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\LedgerStock.Domain.pdb
+C:\Users\Matheus\Desktop\LedgerStock\backend\src\LedgerStock.Domain\obj\Debug\net8.0\ref\LedgerStock.Domain.dll

@@ -1,0 +1,296 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj",
+        "projectName": "LedgerStock.Api",
+        "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\LedgerStock.Api.csproj",
+        "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj": {
+                "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj"
+              },
+              "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.419/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj",
+        "projectName": "LedgerStock.Application",
+        "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj",
+        "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj": {
+                "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.419/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj",
+        "projectName": "LedgerStock.Domain",
+        "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj",
+        "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.419/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj",
+        "projectName": "LedgerStock.Infrastructure",
+        "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Infrastructure\\LedgerStock.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj": {
+                "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Application\\LedgerStock.Application.csproj"
+              },
+              "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj": {
+                "projectPath": "C:\\Users\\Matheus\\Desktop\\LedgerStock\\backend\\src\\LedgerStock.Domain\\LedgerStock.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.419/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

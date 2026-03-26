@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VLXwkSW5eqsBsYQM3l/6Dc7mtflQi/UFEOqG9/djcQ8=",
+  "Source": "LedgerStock.Api",
+  "BasePath": "_content/LedgerStock.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
