@@ -27,3 +27,17 @@ export const createStockMovementRequest = async (payload: CreateStockMovementPay
   const { data } = await api.post('/stockmovements', payload)
   return data
 }
+
+export const exportStockMovementsCsvRequest = async (params?: {
+  productId?: string
+  type?: number | ''
+  startDate?: string
+  endDate?: string
+}) => {
+  const response = await api.get('/stockmovements/export-csv', {
+    params,
+    responseType: 'blob',
+  })
+
+  return response.data
+}

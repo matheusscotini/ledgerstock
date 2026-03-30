@@ -3,6 +3,8 @@ using LedgerStock.Application.DTOs.StockMovements;
 using LedgerStock.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text;
+using System.Globalization;
 
 namespace LedgerStock.Api.Controllers;
 
@@ -59,5 +61,50 @@ public class StockMovementsController : ControllerBase
             return NotFound(new { message = "Movimentação não encontrada." });
 
         return Ok(movement);
+    }
+
+    [HttpGet("export-csv")]
+    public async Task<IActionResult> ExportCsv(
+        [FromQuery] Guid? productId,
+        [FromQuery] int? type,
+        [FromQuery] DateTime? startDate,
+        [FromQuery] DateTime? endDate)
+    {
+        var movements = await _stockMovementService.GetAllAsync(productId, type, startDate, endDate);
+
+        var csv = new StringBuilder();
+
+        csv.AppendLine("Id;ProdutoId;Produto;SKU;Tipo;Quantidade;Motivo;Observacoes;UsuarioId;Usuario;DataCriacao");
+
+        foreach (var movement in movements)
+        {
+            csv.AppendLine(string.Join(";",
+                EscapeCsv(movement.Id.ToString()),
+                EscapeCsv(movement.ProductId.ToString()),
+                EscapeCsv(movement.ProductName),
+                EscapeCsv(movement.ProductSku),
+                EscapeCsv(movement.TypeLabel),
+                EscapeCsv(movement.Quantity.ToString(CultureInfo.InvariantCulture)),
+                EscapeCsv(movement.Reason),
+                EscapeCsv(movement.Notes),
+                EscapeCsv(movement.PerformedByUserId),
+                EscapeCsv(movement.PerformedByUserName),
+                EscapeCsv(movement.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss"))
+            ));
+        }
+
+        var bytes = Encoding.UTF8.GetPreamble().Concat(Encoding.UTF8.GetBytes(csv.ToString())).ToArray();
+        var fileName = $"movimentacoes_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+
+        return File(bytes, "text/csv; charset=utf-8", fileName);
+    }
+
+    private static string EscapeCsv(string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            return "\"\"";
+
+        var escaped = value.Replace("\"", "\"\"");
+        return $"\"{escaped}\"";
     }
 }

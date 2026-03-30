@@ -2,6 +2,8 @@ using LedgerStock.Application.DTOs.Products;
 using LedgerStock.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text;
+using System.Globalization;
 
 namespace LedgerStock.Api.Controllers;
 
@@ -79,5 +81,49 @@ public class ProductsController : ControllerBase
             return NotFound(new { message = "Produto não encontrado." });
 
         return Ok(product);
+    }
+
+    [HttpGet("export-csv")]
+    public async Task<IActionResult> ExportCsv([FromQuery] string? search, [FromQuery] bool? isActive)
+    {
+        var products = await _productService.GetAllAsync(search, isActive);
+
+        var csv = new StringBuilder();
+
+        csv.AppendLine("Id;Nome;SKU;Descricao;Categoria;Preco;EstoqueMinimo;Ativo;EstoqueAtual;TotalEntradas;TotalSaidas;StatusEstoque;CriadoEm;AtualizadoEm");
+
+        foreach (var product in products)
+        {
+            csv.AppendLine(string.Join(";",
+                EscapeCsv(product.Id.ToString()),
+                EscapeCsv(product.Name),
+                EscapeCsv(product.Sku),
+                EscapeCsv(product.Description),
+                EscapeCsv(product.Category),
+                EscapeCsv(product.Price.ToString(CultureInfo.InvariantCulture)),
+                EscapeCsv(product.MinimumStock.ToString()),
+                EscapeCsv(product.IsActive ? "Sim" : "Não"),
+                EscapeCsv(product.CurrentStock.ToString()),
+                EscapeCsv(product.TotalEntries.ToString()),
+                EscapeCsv(product.TotalExits.ToString()),
+                EscapeCsv(product.StockStatus),
+                EscapeCsv(product.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")),
+                EscapeCsv(product.UpdatedAt?.ToString("yyyy-MM-dd HH:mm:ss"))
+            ));
+        }
+
+        var bytes = Encoding.UTF8.GetPreamble().Concat(Encoding.UTF8.GetBytes(csv.ToString())).ToArray();
+        var fileName = $"produtos_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+
+        return File(bytes, "text/csv; charset=utf-8", fileName);
+    }
+
+    private static string EscapeCsv(string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            return "\"\"";
+
+        var escaped = value.Replace("\"", "\"\"");
+        return $"\"{escaped}\"";
     }
 }

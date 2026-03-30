@@ -13,14 +13,21 @@
           </div>
         </div>
 
-        <button
-          v-if="canManageProducts"
-          class="btn btn-primary products-header__button"
-          @click="openCreateModal"
-        >
-          <Plus :size="16" />
-          <span>Novo produto</span>
-        </button>
+        <div class="products-header__actions">
+          <button class="btn btn-secondary products-header__button" @click="handleExportCsv">
+            <Download :size="16" />
+            <span>Exportar CSV</span>
+          </button>
+
+          <button
+            v-if="canManageProducts"
+            class="btn btn-primary products-header__button"
+            @click="openCreateModal"
+          >
+            <Plus :size="16" />
+            <span>Novo produto</span>
+          </button>
+        </div>
       </div>
 
       <div class="products-filters card">
@@ -146,7 +153,7 @@
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import AppLayout from '@/layouts/AppLayout.vue'
 import ProductModal from '@/components/ui/ProductModal.vue'
-import { Package, Plus, Search } from 'lucide-vue-next'
+import { Package, Plus, Search, Download } from 'lucide-vue-next'
 import { usePermissions } from '@/composables/usePermissions'
 import { useAuthStore } from '@/stores/auth'
 import { watchEffect } from 'vue'
@@ -156,6 +163,7 @@ import {
   getProductsRequest,
   toggleProductStatusRequest,
   updateProductRequest,
+  exportProductsCsvRequest,
 } from '@/api/products'
 
 const loading = ref(false)
@@ -181,6 +189,28 @@ const filters = reactive({
   search: '',
   isActive: '',
 })
+
+const handleExportCsv = async () => {
+  try {
+    const blob = await exportProductsCsvRequest({
+      search: filters.search || undefined,
+      isActive: filters.isActive === '' ? '' : filters.isActive === 'true',
+    })
+
+    const url = window.URL.createObjectURL(new Blob([blob], { type: 'text/csv;charset=utf-8;' }))
+    const link = document.createElement('a')
+    link.href = url
+    link.setAttribute('download', `produtos_${new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-')}.csv`)
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+    window.URL.revokeObjectURL(url)
+
+    ui.showToast('success', 'CSV de produtos exportado com sucesso.')
+  } catch (error: any) {
+    ui.showToast('error', 'Não foi possível exportar o CSV de produtos.')
+  }
+}
 
 const totalPages = computed(() => {
   return Math.max(1, Math.ceil(products.value.length / itemsPerPage))
@@ -450,6 +480,13 @@ onMounted(() => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.products-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 960px) {

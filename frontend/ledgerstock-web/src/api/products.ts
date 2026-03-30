@@ -40,3 +40,15 @@ export const toggleProductStatusRequest = async (id: string) => {
   const { data } = await api.patch(`/products/${id}/toggle-status`)
   return data
 }
+
+export const exportProductsCsvRequest = async (params?: {
+  search?: string
+  isActive?: boolean | ''
+}) => {
+  const response = await api.get('/products/export-csv', {
+    params,
+    responseType: 'blob',
+  })
+
+  return response.data
+}

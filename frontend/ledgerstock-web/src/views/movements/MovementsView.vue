@@ -13,10 +13,21 @@
           </div>
         </div>
 
-        <button v-if="canManageMovements" class="btn btn-primary movements-header__button" @click="showModal = true">
-          <Plus :size="16" />
-          <span>Nova movimentação</span>
-        </button>
+        <div class="movements-header__actions">
+          <button class="btn btn-secondary movements-header__button" @click="handleExportCsv">
+            <Download :size="16" />
+            <span>Exportar CSV</span>
+          </button>
+
+          <button
+            v-if="canManageMovements"
+            class="btn btn-primary movements-header__button"
+            @click="showModal = true"
+          >
+            <Plus :size="16" />
+            <span>Nova movimentação</span>
+          </button>
+        </div>
       </div>
 
       <div class="movements-filters card">
@@ -140,9 +151,9 @@ import { computed, onMounted, reactive, ref, watch } from 'vue'
 import AppLayout from '@/layouts/AppLayout.vue'
 import MovementModal from '@/components/ui/MovementModal.vue'
 import { getProductsRequest } from '@/api/products'
-import { createStockMovementRequest, getStockMovementsRequest } from '@/api/stockMovements'
+import { createStockMovementRequest, getStockMovementsRequest, exportStockMovementsCsvRequest } from '@/api/stockMovements'
 import { useUiStore } from '@/stores/ui'
-import { ArrowLeftRight, Plus } from 'lucide-vue-next'
+import { ArrowLeftRight, Plus, Download } from 'lucide-vue-next'
 import { usePermissions } from '@/composables/usePermissions'
 
 const loading = ref(false)
@@ -163,6 +174,30 @@ const filters = reactive({
   startDate: '',
   endDate: '',
 })
+
+const handleExportCsv = async () => {
+  try {
+    const blob = await exportStockMovementsCsvRequest({
+      productId: filters.productId || undefined,
+      type: filters.type === '' ? '' : Number(filters.type),
+      startDate: filters.startDate || undefined,
+      endDate: filters.endDate || undefined,
+    })
+
+    const url = window.URL.createObjectURL(new Blob([blob], { type: 'text/csv;charset=utf-8;' }))
+    const link = document.createElement('a')
+    link.href = url
+    link.setAttribute('download', `movimentacoes_${new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-')}.csv`)
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+    window.URL.revokeObjectURL(url)
+
+    ui.showToast('success', 'CSV de movimentações exportado com sucesso.')
+  } catch (error: any) {
+    ui.showToast('error', 'Não foi possível exportar o CSV de movimentações.')
+  }
+}
 
 const totalPages = computed(() => {
   return Math.max(1, Math.ceil(movements.value.length / itemsPerPage))
@@ -389,6 +424,13 @@ onMounted(async () => {
 
 .pagination__button {
   min-width: 110px;
+}
+
+.movements-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 1100px) {

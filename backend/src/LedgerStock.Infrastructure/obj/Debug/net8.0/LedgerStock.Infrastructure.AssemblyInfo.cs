@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LedgerStock.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4333f13e1aedde355d93b6db3440580b7fdf4e37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89932c438ea95c9b653645b2a63a40e7cc14b661")]
 [assembly: System.Reflection.AssemblyProductAttribute("LedgerStock.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LedgerStock.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

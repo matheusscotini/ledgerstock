@@ -164,3 +164,4 @@ C:\Users\Matheus\Desktop\LedgerStock\backend\tests\LedgerStock.Tests\obj\Debug\n
 C:\Users\Matheus\Desktop\LedgerStock\backend\tests\LedgerStock.Tests\obj\Debug\net8.0\LedgerStock.Tests.pdb
 C:\Users\Matheus\Desktop\LedgerStock\backend\tests\LedgerStock.Tests\obj\Debug\net8.0\LedgerStock.Tests.genruntimeconfig.cache
 C:\Users\Matheus\Desktop\LedgerStock\backend\tests\LedgerStock.Tests\obj\Debug\net8.0\ref\LedgerStock.Tests.dll
+C:\Users\Matheus\Desktop\ledgerstock\backend\tests\LedgerStock.Tests\obj\Debug\net8.0\LedgerStock.Tests.sourcelink.json
